@@ -16,8 +16,8 @@ void SimpleButtonUI::composeScreen(lv_obj_t *scr){
         instance->load(SIMPLELABELUI);
 	  /* if(wifi::isConnected()) { */
 		/* instance->requester->post("url", "body"); */
-		 /* } else { */
-	    /* Serial.println("Not connected to WiFi."); */
+	  /* } else { */
+	  /*   Serial.println("Not connected to WiFi."); */
 	  /* } */
 	  break;
      }

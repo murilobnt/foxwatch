@@ -3,8 +3,8 @@
 namespace foxwatch {
 
 Requester::Requester() { 
-    request.setDebug(false);
-    request.onReadyStateChange(std::bind(&Requester::callback, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+  request.setDebug(false);
+  request.onReadyStateChange(std::bind(&Requester::callback, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
 }
 
 void Requester::open(bool * const requestOpenResult, const char *url, const char *method) {

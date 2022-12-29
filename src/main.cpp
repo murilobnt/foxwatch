@@ -5,14 +5,14 @@ foxwatch::UI ui;
 TTGOClass *ttgo;
 
 void mainLoad(foxwatch::SCIndex index) {
-	switch (index) {
-		case foxwatch::SIMPLEBUTTONUI:
-			ui.load(new foxwatch::SimpleButtonUI(&requester));
-			break;
-		case foxwatch::SIMPLELABELUI:
-			ui.load(new foxwatch::SimpleLabelUI());
-			break;
-	}
+  switch (index) {
+    case foxwatch::SIMPLEBUTTONUI:
+      ui.load(new foxwatch::SimpleButtonUI(&requester));
+	  break;
+	case foxwatch::SIMPLELABELUI:
+	  ui.load(new foxwatch::SimpleLabelUI());
+	  break;
+  }
 }
 
 void setup() {

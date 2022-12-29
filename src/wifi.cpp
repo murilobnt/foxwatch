@@ -5,15 +5,15 @@ namespace foxwatch {
 namespace wifi {
 
 WiFiData *scan() {
-	int16_t n = WiFi.scanNetworks();
-	if(!n)
-		return nullptr;
+  int16_t n = WiFi.scanNetworks();
+  if(!n)
+    return nullptr;
 
-	WiFiData *dat = (WiFiData*)malloc(n * sizeof(struct WiFiData));
-	for(int16_t i = 0; i < n; ++i)
-		dat[i] = { WiFi.SSID(i).c_str(), (WiFi.encryptionType(i) != WIFI_AUTH_OPEN) };
+  WiFiData *dat = (WiFiData*)malloc(n * sizeof(struct WiFiData));
+  for(int16_t i = 0; i < n; ++i)
+    dat[i] = { WiFi.SSID(i).c_str(), (WiFi.encryptionType(i) != WIFI_AUTH_OPEN) };
 
-	return dat; // CAUTION: REQUIRES FREE()
+  return dat; // CAUTION: REQUIRES FREE()
 }
 
 void connect(const char *ssid, const char *password) {
